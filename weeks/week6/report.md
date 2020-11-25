@@ -12,85 +12,92 @@
 
 ### Problem 1: Floating point numbers
 ```
-insert your pattern here
+\d\.\d+
 ```
 ### Problem 2: Years before 1990
 ```
-insert your pattern here
+.+19[0-8][0-9].
 ```
 ### Problem 3: Hexadecimal colors
 ```
-insert your pattern here
+#[0-9A-F]{6}
 ```
 ### Problem 4: Grayscale colors
 ```
-insert your pattern here
+#([0-9a-fA-F]{1,2})\1\1
 ```
 ### Problem 5: Too long lines
 ```
-insert your pattern here
+.{30,}
 ```
 ### Problem 6: Remove repeating words
 ```
-insert your pattern here
+(\s.+)\1
+$1
 ```
 ### Problem 7: Match HTML tags
 ```
-insert your pattern here
+<.?\w+\s?\w*>
 ```
 ### Problem 8: Cut numbers two digits after floating point
 ```
-insert your pattern here
+(\d\.\d{2})\d+
+$1
 ```
 ### Problem 9: Digit commas formatting
 ```
-insert your pattern here
+(\d)(?=(\d{3})+\b)
+$1,
 ```
 ### Problem 10: Match lowercase function declarations
 ```
-insert your pattern here
+function\s[a-z]+\w*\(.?\)
 ```
 ### Problem 11: Change date formats
 ```
-insert your pattern here
+(\d{4})-(\d{2})-(\d{2})
+$3.$2.$1
 ```
 ### Problem 12: Validate 24h time format
 ```
-insert your pattern here
+([0-1]\d|2[0-3]):[0-5]\d
 ```
 ### Problem 13: Validate AM/PM time format
 ```
-insert your pattern here
+\b(0?\d|1[0-2]):[0-5]\d\s[A,P]M
 ```
 ### Problem 14: Pascal style to C-style parameters
 ```
-insert your pattern here
+;(\s\w)
+,$1
 ```
 ### Problem 15: Change variable initialization
 ```
-insert your pattern here
+var\s*(\w*)\s=\s*new\s*((\w|<|>)+)
+$2 $1
 ```
 ### Problem 16: IPv6 adresses
 ```
-insert your pattern here
+([0-9a-f]{0,4}:){1,7}[0-9a-f]{1,4}
 ```
 ### Problem 17: Validate 32 or 24 bit hexadecimal colors
 ```
-insert your pattern here
+(#[0-9a-f]{6}\b)|(#[0-9a-f]{8}\b)
 ```
 ### Problem 18: Replace operators with function calls
 ```
-insert your pattern here
+(\w[0-9a-z()*.]+)\s\+\s([0-9a-z()*.]+)
+Add($1, $2)
 ```
 ### Problem 19: Extract query string from URL
 ```
-insert your pattern here
+(\w+=.+)|(\?)
 ```
 ### Problem 20: Extract host from URL
 ```
-insert your pattern here
+http://.+com
 ```
 ### Problem 21: Strings not containing word
 ```
-insert your pattern here
+Cake(.(?!chocolate))+$
 ```
